@@ -1,0 +1,53 @@
+.title {
+  font-size: 100px;
+  position: absolute;
+  letter-spacing: -7px;
+  top: 461px;
+  left: 625px;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  opacity: 0;
+  animation: appear 0.0001s linear forwards;
+  animation-delay: 3.9s;
+}
+
+
+.title span label {
+  color: #fff;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #000;
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 3.5s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rev-block {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}

@@ -1,0 +1,19 @@
+.scroll-down {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: absolute;
+    bottom: 110px;
+    right: -10px;
+    transform: rotate(-90deg);
+  }
+  
+  .scroll-down::before {
+    content: "";
+    border: 1px solid black;
+    width: 50px;
+    margin: 0 20px 0 0;
+    display: inline-block;
+    transform: translateY(-3px);
+  }

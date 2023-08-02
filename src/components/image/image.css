@@ -1,0 +1,49 @@
+.image {
+    position: absolute;
+    top: 12%;
+    left: 10%;
+  }
+  
+  .image img {
+    width: 420px;
+    height: 600px;
+    opacity: 0;
+    animation: appear 1s linear forwards;
+    animation-delay: 3.2s;
+  }
+  
+  .image::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #61b087;
+    position: absolute;
+    animation: rev-img 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 2.8s;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rev-img {
+    0% {
+      left: 0;
+      width: 0%;
+    }
+    50% {
+      left: 0;
+      width: 100%;
+    }
+    100% {
+      left: 100%;
+      width: 0%;
+    }
+  }

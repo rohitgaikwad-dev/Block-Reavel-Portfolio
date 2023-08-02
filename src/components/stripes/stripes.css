@@ -1,0 +1,18 @@
+.s-one {
+  position: absolute;
+  width: 57px;
+  background: #fda94f;
+  left: 15%;
+}
+.s-two {
+  position: absolute;
+  width: 98px;
+  background: #ed6335;
+  left: 17.9%;
+}
+.s-three {
+  position: absolute;
+  width: 20px;
+  background: #2f2d38;
+  left: 23%;
+}

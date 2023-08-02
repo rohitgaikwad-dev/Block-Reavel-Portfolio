@@ -1,0 +1,49 @@
+.subtitle {
+  font-size: 38px;
+  position: absolute;
+  transform: rotate(90deg);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  left: 1124px;
+  top: 345px;
+  font-weight: 600;
+  opacity: 0;
+  animation: appear 0.001s linear forwards;
+  animation-delay: 5.4s;
+}
+
+.subtitle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #61b087;
+  animation: rev-title 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 5s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rev-title {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0;
+    width: 10%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
