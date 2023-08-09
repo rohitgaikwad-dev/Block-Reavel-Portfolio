@@ -17,7 +17,7 @@ Feature
 
 Installation
 
-1. Clone the repository: git clone https://github.com/yourusername/your-repo.git
+1. Clone the repository: [git clone](https://github.com/rohitgaikwad-dev/Block-Reavel-Portfolio.git)
 2. Navigate to the project directory: cd your-repo
 3. Install dependencies: npm install
 4. Start the development server: npm start
