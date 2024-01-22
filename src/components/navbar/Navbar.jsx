@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from "react";
 import anime from "animejs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
 import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ categories }) => {
   const navbarRef = useRef(null);
 
   useEffect(() => {
@@ -28,21 +29,25 @@ const Navbar = () => {
 
       <div className="categories">
         <ul>
-          <li>man</li>
-          <li>women</li>
-          <li>accesories</li>
-          <li>beauty</li>
+          {categories.map((category, index) => (
+            <li key={index}>{category}</li>
+          ))}
         </ul>
       </div>
 
       <div className="menu">
-        <FontAwesomeIcon icon={faBars} style={{ color: "#000000" }} />
+        <FontAwesomeIcon icon={faBars} className="icon" />
       </div>
+
       <div className="cart">
-        <FontAwesomeIcon icon={faCartShopping} style={{ color: "#000000" }} />
+        <FontAwesomeIcon icon={faCartShopping} className="icon" />
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Navbar;
