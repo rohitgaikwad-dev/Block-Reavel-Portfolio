@@ -12,17 +12,19 @@ import {
 import "./App.css";
 
 const App = () => {
+  const categories = ["man", "women", "accesories", "beauty"];
+
   return (
     <div className="App">
-        <Stripes />
-        <Navbar />
-        <Image />
-        <Title />
-        <Subtitle />
-        <Button />
-        <Scrolldown />
-        <Social />
-      </div>
+      <Stripes />
+      <Navbar categories={categories} />
+      <Image />
+      <Title />
+      <Subtitle />
+      <Button />
+      <Scrolldown />
+      <Social />
+    </div>
   );
 };
 
